@@ -17,11 +17,12 @@ subprojects {
 allprojects {
     group = "com.example"
     version = "0.0.1-SNAPSHOT"
-    java.sourceCompatibility = JavaVersion.VERSION_21
+    java.sourceCompatibility = JavaVersion.VERSION_17
     repositories {
         mavenCentral()
     }
     dependencies {
+        implementation("jakarta.websocket:jakarta.websocket-api:2.1.1")
         implementation("org.springframework.boot:spring-boot-starter-web")
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
